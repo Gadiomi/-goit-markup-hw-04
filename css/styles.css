@@ -28,8 +28,7 @@ body {
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
@@ -151,20 +150,34 @@ p {
 /* Hero */
 
 .hero {
-  text-align: center;
   padding: 188px 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1440px;
+  height: 600px;
 
+  text-align: center;
   background-color: var(--defoult-text-color);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
   margin-bottom: 48px;
-  margin-left: 316px;
+  margin-left: auto;
+  margin-right: auto;
   width: 496px;
 
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
+  text-align: center;
   color: var(--main-white-color);
 }
 
@@ -301,7 +314,39 @@ p {
 }
 
 .list-text.team {
+  margin-bottom: 8px;
   text-align: center;
+}
+.soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.soc-item {
+  width: 40px;
+  height: 40px;
+}
+
+.soc-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--main-iris-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.soc-icon {
+  fill: var(--main-white-color);
+}
+
+.soc-link:is(:hover, :focus) {
+  background-color: var(--main-ocean-color);
+}
+.soc-link:is(:hover, :focus) > .soc-icon {
+  fill: green;
 }
 
 /* Footer */
@@ -373,7 +418,10 @@ p {
   justify-content: center;
   margin-bottom: 72px;
 }
-
+.filter-item:is(:hover, :focus) {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 .filter-list .filter-item + .filter-item {
   margin-left: 24px;
 }
@@ -413,6 +461,10 @@ p {
   width: 360px;
   margin-right: 24px;
   margin-bottom: 48px;
+}
+.portfolio-item:is(:hover, :focus) {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-item:nth-child(3n) {
