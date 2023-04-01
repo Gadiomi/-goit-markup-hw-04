@@ -281,8 +281,6 @@ p {
 /* Out team */
 
 .section-team {
-  margin: 0 auto;
-  width: 1440px;
   padding: 120px 0;
 
   background-color: var(--main-cloud-color);
